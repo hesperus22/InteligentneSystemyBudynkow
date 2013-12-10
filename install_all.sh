@@ -30,6 +30,7 @@ cd ../..
 
 #install WebIOPi
 cd WebIOPi
+chmod 755 setup.sh
 ./setup.sh
 cd ..
 cp InteligentneSystemyBudynkow/webiopi.conf /etc/webiopi/config
