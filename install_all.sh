@@ -6,6 +6,7 @@ apt-get install -y make
 apt-get install -y gcc
 apt-get install -y git
 apt-get install -y $1
+apt-get install -y $1-dev
 
 #bcm2835 library 
 wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.34.tar.gz
@@ -28,7 +29,7 @@ $1 setup.py install
 cd ../..
 
 #install WebIOPi
-cd WEbIOPi
+cd WebIOPi
 ./setup.sh
 cd ..
 cp InteligentneSystemyBudynkow/webiopi.conf /etc/webiopi/config
