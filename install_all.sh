@@ -31,7 +31,7 @@ cd ../..
 cd WEbIOPi
 ./setup.sh
 cd ..
-cp InteligentneSystemyBudynkow/config /etc/webiopi/config
+cp InteligentneSystemyBudynkow/webiopi.conf /etc/webiopi/config
 
 #lirc
 apt-get install -y lirc-rpi
