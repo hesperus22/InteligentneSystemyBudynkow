@@ -36,7 +36,7 @@ cd ..
 cp InteligentneSystemyBudynkow/webiopi.conf /etc/webiopi/config
 
 #lirc
-apt-get install -y lirc-rpi
+apt-get install -y lirc
 echo "lirc_dev" >> /etc/modules
 echo "lirc_rpi gpio_in_pin = 22" >> /etc/modules
 cp InteligentneSystemyBudynkow/lirc_hardware.conf /etc/lirc/hardware.conf
