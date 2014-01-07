@@ -52,3 +52,12 @@ modprobe lirc_dev
 modprobe lirc_rpi gpio_in_pin = 27
 /etc/init.d/lirc stop
 /etc/init.d/lirc start
+
+cp InteligentneSystemyBudynkow/irexec /etc/init.d/irexec
+cp InteligentneSystemyBudynkow/irexec.conf /etc/lirc/lircrc
+chmod 755 /etc/init.d/irexec
+update-rc.d irexec defaults
+update-rc.d webiopi defaults
+
+/etc/init.d/webiopi start
+/etc/init.d/irexec start

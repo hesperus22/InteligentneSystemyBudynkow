@@ -1,0 +1,30 @@
+#! /bin/sh
+# /etc/init.d/irexec
+
+### BEGIN INIT INFO
+# Provides:          irexec
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: irexec
+# Description:       irexec
+### END INIT INFO
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting irexec"
+    # run application you want to start
+    irexec -d /etc/lirc/lircrc 
+    ;;
+  stop)
+    echo "Stopping irexec"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/irexec {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
